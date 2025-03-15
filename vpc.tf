@@ -72,3 +72,13 @@ resource "aws_security_group_rule" "all_egress" {
   cidr_blocks       = ["0.0.0.0/0"]
   description       = "Allow all outbound traffic"
 }
+
+resource "aws_security_group_rule" "ssh_ingress" {
+  type              = "ingress"
+  security_group_id = aws_security_group.web_sg.id
+  from_port         = 22
+  to_port           = 22
+  protocol          = "tcp"
+  cidr_blocks       = ["0.0.0.0/0"]
+  description       = "Allow SSH access from anywhere"
+}

@@ -1,0 +1,28 @@
+# Terraform state files (contain sensitive info)
+*.tfstate
+*.tfstate.backup
+terraform.tfstate.d/
+
+# Terraform crash logs
+crash.log
+
+# Terraform plan output
+*.tfplan
+
+# Ignore Terraform lock file (specific to your machine)
+.terraform.lock.hcl
+
+# Ignore .terraform directory (local plugin/cache data)
+.terraform/
+
+# Ignore any sensitive variable files (if you store credentials locally)
+*.auto.tfvars
+*.auto.tfvars.json
+terraform.tfvars
+terraform.tfvars.json
+
+# Ignore logs, editor backups, and system files
+*.log
+*.bak
+.DS_Store
+Thumbs.db
